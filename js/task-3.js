@@ -6,7 +6,8 @@ inElm.addEventListener("input", handleInputMsg);
 
 function handleInputMsg(event){
     let usrName = event.target.value;
-    if (usrName.match(/^\u0020{1,}$/)) {
+    // if (usrName.match(/^\u0020{1,}$/) | usrName === "") {
+    if (usrName === "" || usrName.match(/^\u0020{1,}$/)) {
         outElm.textContent = "Anonymous";
          console.log("event.target.value");
         return
